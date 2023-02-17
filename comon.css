@@ -7,6 +7,16 @@ body {
     height: 100vh;
     perspective: 1500px;
 }
+.cube-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all .5s ease;
+}
 .cube {
     position: absolute;
     top: 50%;
@@ -15,6 +25,20 @@ body {
     transform-style: preserve-3d;
     width: 150px;
     height: 150px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.cube-content:hover .cube {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(-30deg) rotateY(-45deg);
+    transform-style: preserve-3d;
+    width: 150px;
+    height: 150px;
+}
+.cube-content:hover .cube .down {
+    box-shadow: 20px 20px 25px 15px #1d213b;
 }
 .cube > * {
     position: absolute;
@@ -23,21 +47,22 @@ body {
     width: 150px;
     height: 150px;
     background: #1e234095;
+    border-radius: 2px;
 }
 .front {
-    animation: Alimardon 3s infinite;
+    animation: Alimardon 5s ease-out infinite;
     transform: translate3d(0, 0, 75px);
 }
 .back {
-    animation: Alimardon 3s infinite;
+    animation: Alimardon 5s ease-out infinite;
     transform: translate3d(0, 0, -75px) rotateZ(-180deg) rotateX(180deg);
 }
 .right {
-    animation: Alimardon 3s infinite;
+    animation: Alimardon 5s ease-out infinite;
     transform: translate3d(75px, 0, 0) rotateY(90deg);
 }
 .left {
-    animation: Alimardon 3s infinite;
+    animation: Alimardon 5s ease-out infinite;
     transform: translate3d(-75px, 0, 0) rotateY(-90deg);
 }
 .up {
@@ -47,6 +72,7 @@ body {
     background: rgba(0, 255, 0, 0.712);
     transform: translate3d(0, 75px, 0) rotatex(90deg);
     box-shadow: 0 0 15px 7px #1d213b;
+    transition: all .5s ease;
 }
 @keyframes Alimardon {
     0% {
