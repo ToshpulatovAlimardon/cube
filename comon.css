@@ -15,7 +15,6 @@ body {
     transform-style: preserve-3d;
     width: 150px;
     height: 150px;
-    animation: Alimardon 5s infinite;
 }
 .cube > * {
     position: absolute;
@@ -24,35 +23,63 @@ body {
     width: 150px;
     height: 150px;
     background: #1e234095;
-    border: 2px solid #000000d0;
 }
 .front {
+    animation: Alimardon 5s infinite;
     transform: translate3d(0, 0, 75px);
 }
 .back {
+    animation: Alimardon 5s infinite;
     transform: translate3d(0, 0, -75px) rotateZ(-180deg) rotateX(180deg);
 }
 .right {
+    animation: Alimardon 5s infinite;
     transform: translate3d(75px, 0, 0) rotateY(90deg);
 }
 .left {
+    animation: Alimardon 5s infinite;
     transform: translate3d(-75px, 0, 0) rotateY(-90deg);
 }
 .up {
     transform: translate3d(0, -75px, 0) rotatex(90deg);
 }
 .down {
+    background: rgba(0, 255, 0, 0.712);
     transform: translate3d(0, 75px, 0) rotatex(90deg);
     box-shadow: 0 0 15px 7px #1d213b;
 }
 @keyframes Alimardon {
     0% {
-        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(0deg);
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 0%, #1e234095 0%);
+    }
+    10% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 10%, #1e234095 90%);
+    }
+    20% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 20%, #1e234095 80%);
+    }
+    30% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 30%, #1e234095 70%);
+    }
+    40% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 40%, #1e234095 60%);
     }
     50% {
-        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(360deg);
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 50%, #1e234095 50%);
+    }
+    60% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 60%, #1e234095 40%);
+    }
+    70% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 70%, #1e234095 30%);
+    }
+    80% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 80%, #1e234095 20%);
+    }
+    90% {
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 90%, #1e234095 10%);
     }
     100% {
-        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(0deg);
+        background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.712) 100%, #1e234095 0%);
     }
 }
