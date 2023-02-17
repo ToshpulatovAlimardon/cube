@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #304057;
+    width: 100%;
+    height: 100vh;
+    perspective: 1500px;
+}
+.cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(-30deg) rotateY(-45deg);
+    transform-style: preserve-3d;
+    width: 150px;
+    height: 150px;
+    animation: Alimardon 5s infinite;
+}
+.cube > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #1e234095;
+    border: 2px solid #000000d0;
+}
+.front {
+    transform: translate3d(0, 0, 75px);
+}
+.back {
+    transform: translate3d(0, 0, -75px) rotateZ(-180deg) rotateX(180deg);
+}
+.right {
+    transform: translate3d(75px, 0, 0) rotateY(90deg);
+}
+.left {
+    transform: translate3d(-75px, 0, 0) rotateY(-90deg);
+}
+.up {
+    transform: translate3d(0, -75px, 0) rotatex(90deg);
+}
+.down {
+    transform: translate3d(0, 75px, 0) rotatex(90deg);
+    box-shadow: 0 0 15px 7px #1d213b;
+}
+@keyframes Alimardon {
+    0% {
+        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(0deg);
+    }
+}
