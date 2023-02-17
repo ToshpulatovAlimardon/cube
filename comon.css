@@ -28,7 +28,8 @@ body {
     cursor: pointer;
     transition: all .5s ease;
 }
-.cube-content:hover .cube {
+.cube-content:hover .cube,
+.cube-content:focus .cube {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -37,7 +38,8 @@ body {
     width: 150px;
     height: 150px;
 }
-.cube-content:hover .cube .down {
+.cube-content:hover .cube .down,
+.cube-content:focus .cube .down {
     box-shadow: 20px 20px 25px 15px #1d213b;
 }
 .cube > * {
